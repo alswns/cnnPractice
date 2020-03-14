@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-trainset = torchvision.datasets.MNIST('../mnist_data/',
+trainset = torchvision.datasets.MNIST('./mnist_data/',
                              download=True,
                              train=True,
                              transform=transforms.Compose([
@@ -15,7 +15,7 @@ trainset = torchvision.datasets.MNIST('../mnist_data/',
                                  transforms.Normalize((0.1307,), (0.3081,)) 
                              ])) 
     
-testset = torchvision.datasets.MNIST("../mnist_data/", 
+testset = torchvision.datasets.MNIST("./mnist_data/", 
                              download=True,
                              train=False,
                              transform= transforms.Compose([
