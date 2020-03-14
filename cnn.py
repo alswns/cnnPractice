@@ -16,7 +16,7 @@ trainset = torchvision.datasets.MNIST('../mnist_data/',
                              ])) 
     
 testset = torchvision.datasets.MNIST("../mnist_data/", 
-                             download=False,
+                             download=True,
                              train=False,
                              transform= transforms.Compose([
                                transforms.ToTensor(),
